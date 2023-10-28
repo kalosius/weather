@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 import requests
 import datetime
 
@@ -27,3 +28,4 @@ def index(request):
     day = datetime.date.today()
 
     return render(request, 'weatherapp/index.html', {'description': description, 'icon': icon, 'temp': temp, 'day': day, 'city':city})
+
