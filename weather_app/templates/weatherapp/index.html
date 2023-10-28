@@ -34,17 +34,3 @@
     </div>
 </body>
 </html>
-
-<form method="POST">
-    {% csrf_token %}
-    <input type="text" name="city" placeholder="Enter City">
-    <button type="submit">search</button>
-</form>
-
-<h2>{{ temp }}&#176; C</h2>
-<h3>{{ city }}</h3>
-<p>{{ description }}</p>
-<p>
-    <img src="http://openweathermap.org/img/w/{{ icon }}.png" width="100px">
-</p>
-<p>{{ day }}</p>
