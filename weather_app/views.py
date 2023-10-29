@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.contrib import messages
 import requests
 import datetime
 
@@ -8,7 +7,7 @@ def index(request):
     city = request.POST.get('city', 'kampala')
 
     # OpenWeatherMap API
-    weather_api_key = '69eea1b44f312e9c670d08e2c6b7d69c'
+    weather_api_key = '607653a33a21bafbf41f4b4392c50e71'
     weather_url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_api_key}'
     weather_params = {'units': 'metric'}
 
@@ -39,7 +38,7 @@ def index(request):
     # Fetch image data from Google Custom Search
     city_data = requests.get(city_url).json()
     search_items = city_data.get("items")
-    image_url = search_items[1]['link'] if search_items else ''
+    image_url = search_items[0]['link'] if search_items else ''
 
     # Get the current date
     day = datetime.date.today()
