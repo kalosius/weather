@@ -30,7 +30,7 @@ form{
   grid-gap:3%;
 }
 .container{
-  width: 50%;;
+  width: 50%;
   /* background-color: #77ACF1; */
   background: var(--transp-white-2);
   backdrop-filter: blur(10px);
@@ -39,7 +39,7 @@ form{
   border: 2px solid var(--transp-white-2);
   border-radius: 10px;
   color:rgb(5,41,51);
-  height: 600px;
+  height: 450px;
 }
 input, .btn ::placeholder{
   background-color: transparent;
@@ -161,5 +161,5 @@ body  {
   background-size:cover;
   background-repeat: no-repeat;
   margin: 0;
-  width: 1920px;      
+     
 }
